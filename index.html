@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Taydem Process Co. — Workflow & Document Systems for Small Businesses</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #1a3a5c;
+  --teal: #2a9d8f;
+  --teal-dark: #1f7a6e;
+  --cream: #f5f3ee;
+  --cream-dark: #ede9e0;
+  --text: #2d2d2d;
+  --text-mid: #555;
+  --text-light: #888;
+  --white: #fff;
+  --border: #ddd8cf;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Source Sans 3', sans-serif; color: var(--text); background: var(--white); font-size: 16px; line-height: 1.6; }
+
+/* HEADER */
+header {
+  background: var(--navy);
+  padding: 1.25rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.header-brand {}
+.header-brand h1 {
+  font-family: 'Lora', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 0.1rem;
+}
+.header-brand p {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--teal);
+  font-weight: 600;
+}
+.header-contact {
+  text-align: right;
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.6;
+}
+.header-contact strong { color: var(--white); display: block; font-weight: 600; }
+.header-contact a { color: rgba(255,255,255,0.85); text-decoration: none; }
+.header-contact a:hover { color: var(--teal); }
+.teal-rule { height: 4px; background: var(--teal); }
+
+/* HERO BAND */
+.hero {
+  background: var(--cream);
+  padding: 2.5rem 2rem;
+  border-bottom: 1px solid var(--border);
+}
+.hero-inner { max-width: 820px; margin: 0 auto; }
+.hero p {
+  font-size: 1.1rem;
+  line-height: 1.75;
+  color: var(--text);
+}
+.hero p a, .hero strong a {
+  color: var(--teal);
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px solid var(--teal);
+}
+.hero strong { color: var(--teal); font-weight: 600; }
+
+/* MAIN CONTENT */
+main { max-width: 820px; margin: 0 auto; padding: 2.5rem 2rem 3rem; }
+
+/* SECTION LABELS */
+.section-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--teal);
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+
+/* SERVICE CARDS */
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+.service-card {
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1.1rem 1.25rem;
+  background: var(--white);
+}
+.service-card h3 {
+  font-family: 'Lora', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 0.35rem;
+}
+.service-card p {
+  font-size: 0.875rem;
+  color: var(--text-mid);
+  line-height: 1.55;
+}
+
+/* TWO COL SECTION */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+  align-items: start;
+}
+
+/* PAIN POINTS */
+.pain-list { list-style: none; }
+.pain-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.9rem;
+  color: var(--text-mid);
+  line-height: 1.45;
+}
+.pain-list li:last-child { border-bottom: none; }
+.pain-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--teal);
+  flex-shrink: 0;
+  margin-top: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pain-dot svg { width: 10px; height: 10px; fill: white; }
+
+/* PROCESS STEPS */
+.process-steps { display: flex; flex-direction: column; gap: 0; }
+.process-step {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.process-step:last-child { border-bottom: none; }
+.step-num {
+  font-family: 'Lora', serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--navy);
+  min-width: 28px;
+  line-height: 1.2;
+  padding-top: 2px;
+}
+.step-content h4 {
+  font-family: 'Lora', serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.price-badge {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  background: var(--teal);
+  color: white;
+  padding: 2px 8px;
+  border-radius: 3px;
+  letter-spacing: 0.04em;
+}
+.step-content p {
+  font-size: 0.875rem;
+  color: var(--text-mid);
+  line-height: 1.55;
+}
+
+/* CTA BAND */
+.cta-band {
+  background: var(--navy);
+  border-radius: 6px;
+  padding: 2rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 0;
+}
+.cta-band h2 {
+  font-family: 'Lora', serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--white);
+  margin-bottom: 0.35rem;
+}
+.cta-band p {
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.7);
+  max-width: 360px;
+}
+.cta-contact { text-align: right; }
+.cta-contact .cta-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--teal);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+.cta-contact a {
+  display: block;
+  color: var(--white);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.cta-contact a:hover { color: var(--teal); }
+
+/* FOOTER */
+footer {
+  background: var(--navy);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 3rem;
+}
+footer span {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.5);
+}
+
+/* RESPONSIVE */
+@media (max-width: 640px) {
+  .services-grid { grid-template-columns: 1fr; }
+  .two-col { grid-template-columns: 1fr; gap: 2rem; }
+  .cta-band { text-align: center; }
+  .cta-contact { text-align: center; }
+  header { text-align: center; justify-content: center; }
+  .header-contact { text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-brand">
+    <h1>Taydem Process Co.</h1>
+    <p>Workflow &amp; Document Systems for Small Businesses</p>
+  </div>
+  <div class="header-contact">
+    <strong>Maria Taydem, PMP</strong>
+    <a href="mailto:maria@taydemprocess.com">maria@taydemprocess.com</a>
+    <a href="tel:8654318067">865-431-8067</a>
+  </div>
+</header>
+<div class="teal-rule"></div>
+
+<div class="hero">
+  <div class="hero-inner">
+    <p>I'm a <strong>certified project manager</strong> who helps small businesses get the right systems in place — so your team works smarter, your documents are always findable, and your business can grow without everything depending on you.</p>
+  </div>
+</div>
+
+<main>
+
+  <div class="section-label">What I help with</div>
+  <div class="services-grid">
+    <div class="service-card">
+      <h3>Document Management</h3>
+      <p>Organized, findable systems for your contracts, estimates, permits &amp; photos — so nothing gets lost.</p>
+    </div>
+    <div class="service-card">
+      <h3>Workflow Design &amp; Automation</h3>
+      <p>Repeatable processes with simple automations so your routine tasks take care of themselves.</p>
+    </div>
+    <div class="service-card">
+      <h3>Handoff Protocols</h3>
+      <p>Clear flows between your office, crews, subs, and clients — so nothing falls through the cracks.</p>
+    </div>
+    <div class="service-card">
+      <h3>SOPs &amp; Onboarding</h3>
+      <p>Written systems so your new hires get up to speed without you teaching everything from scratch.</p>
+    </div>
+  </div>
+
+  <div class="two-col">
+    <div>
+      <div class="section-label">Sound familiar?</div>
+      <ul class="pain-list">
+        <li>
+          <span class="pain-dot"><svg viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></span>
+          You're searching for files instead of running your business
+        </li>
+        <li>
+          <span class="pain-dot"><svg viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></span>
+          A key employee left and took the "how" with them
+        </li>
+        <li>
+          <span class="pain-dot"><svg viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></span>
+          Jobs stall or go sideways when you're not available
+        </li>
+        <li>
+          <span class="pain-dot"><svg viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></span>
+          You're growing fast, but operations aren't keeping pace
+        </li>
+        <li>
+          <span class="pain-dot"><svg viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></span>
+          New hires take too long to get productive
+        </li>
+        <li>
+          <span class="pain-dot"><svg viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></span>
+          You're doing the same rework job after job
+        </li>
+        <li>
+          <span class="pain-dot"><svg viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></span>
+          Your team handles manually what should run automatically
+        </li>
+      </ul>
+    </div>
+    <div>
+      <div class="section-label">How we'll work together</div>
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <h4>Discovery audit <span class="price-badge">$375</span></h4>
+            <p>A half-day look at how your business currently runs. You walk away with a full gap analysis and roadmap — no obligation to go further.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <h4>Build &amp; implement</h4>
+            <p>Right systems tailored to your business, not a generic template. Team training included so it actually sticks.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <h4>Ongoing support</h4>
+            <p>Optional retainer as you grow and add people.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-band">
+    <div>
+      <h2>Let's find out if we're a good fit.</h2>
+      <p>No pressure — just a 30-minute conversation about where your business is and what's getting in the way.</p>
+    </div>
+    <div class="cta-contact">
+      <div class="cta-label">Email</div>
+      <a href="mailto:maria@taydemprocess.com">maria@taydemprocess.com</a>
+      <div class="cta-label" style="margin-top:0.5rem;">Call or text</div>
+      <a href="tel:8654318067">865-431-8067</a>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <span>Taydem Process Co. &nbsp;·&nbsp; Knoxville, TN</span>
+  <span>PMP Certified &nbsp;·&nbsp; Operations &amp; Workflow Specialist</span>
+</footer>
+
+</body>
+</html>
